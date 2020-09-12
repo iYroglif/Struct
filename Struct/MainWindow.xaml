@@ -1,0 +1,42 @@
+﻿<Window x:Class="Struct.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Struct"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="CREATE" HorizontalAlignment="Left" Margin="26,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="crt" HorizontalAlignment="Left" Margin="81,36,0,0" Text="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="206,35,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="SET" HorizontalAlignment="Left" Margin="26,57,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="s1" HorizontalAlignment="Left" Margin="81,61,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="37"/>
+        <TextBox x:Name="s2" HorizontalAlignment="Left" Margin="123,61,0,0" Text="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <TextBox x:Name="s3" HorizontalAlignment="Left" Margin="164,62,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="37"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="206,60,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label Content="GETMIN" HorizontalAlignment="Left" Margin="26,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="gm1" HorizontalAlignment="Left" Margin="81,86,0,0" Text="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="gm2" HorizontalAlignment="Left" Margin="146,86,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="206,85,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Label Content="ADD" HorizontalAlignment="Left" Margin="26,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ad1" HorizontalAlignment="Left" Margin="81,110,0,0" Text="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="37"/>
+        <TextBox x:Name="ad2" HorizontalAlignment="Left" Margin="123,110,0,0" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <TextBox x:Name="ad3" HorizontalAlignment="Left" Margin="164,111,0,0" Text="-1" TextWrapping="Wrap" VerticalAlignment="Top" Width="37"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="206,110,0,0" VerticalAlignment="Top" Click="Button_Click_3"/>
+        <Label x:Name="gm" Content="Label" HorizontalAlignment="Left" Margin="251,82,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dg" ItemsSource="{Binding}" Margin="25,207,76,124"/>
+        <Button x:Name="rfrsh" Content="Refresh" HorizontalAlignment="Left" Margin="729,0,0,0" VerticalAlignment="Center" Click="Button_Click_4"/>
+        <Label Content="GETSUM" HorizontalAlignment="Left" Margin="26,133,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="gs1" HorizontalAlignment="Left" Margin="81,137,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="gs2" HorizontalAlignment="Left" Margin="146,137,0,0" Text="15" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="206,136,0,0" VerticalAlignment="Top" Click="Button_Click_5"/>
+        <Label x:Name="gs" Content="Label" HorizontalAlignment="Left" Margin="251,133,0,0" VerticalAlignment="Top"/>
+        <Label Content="FOR I = " HorizontalAlignment="Left" Margin="345,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="f1" HorizontalAlignment="Left" Margin="403,36,0,0" Text="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="25"/>
+        <Label Content="TO" HorizontalAlignment="Left" Margin="433,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="f2" HorizontalAlignment="Left" Margin="463,36,0,0" Text="12" TextWrapping="Wrap" VerticalAlignment="Top" Width="25"/>
+        <Label Content="Измените код в программе перед использованием" HorizontalAlignment="Left" Margin="345,61,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="644,64,0,0" VerticalAlignment="Top" Click="Button_Click_6"/>
+    </Grid>
+</Window>
