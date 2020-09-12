@@ -16,6 +16,43 @@ namespace Struct
             InitializeComponent();
         }
 
+        void set(int L, int R, int val)
+        {
+            for (int i = L; i < R; ++i)
+            {
+                stt[i] = val;
+            }
+        }
+
+        int get_min(int L, int R)
+        {
+            int tmp = L;
+            for (int i = tmp + 1; i < R; ++i)
+            {
+                if (stt[i] < stt[tmp])
+                {
+                    tmp = i;
+                }
+            }
+            return stt[tmp];
+        }
+
+        void add(int L, int R, int val)
+        {
+            for (int i = L; i < R; ++i)
+                stt[i] += val;
+        }
+
+        int get_sum(int L, int R)
+        {
+            int sum = 0;
+            for (int i = L; i < R; ++i)
+            {
+                sum += stt[i];
+            }
+            return sum;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             stt = new int[Int32.Parse(crt.Text)];
@@ -28,30 +65,18 @@ namespace Struct
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            for (int i = Int32.Parse(s1.Text); i < Int32.Parse(s2.Text); ++i)
-            {
-                stt[i] = Int32.Parse(s3.Text);
-            }
+            set(Int32.Parse(s1.Text), Int32.Parse(s2.Text), Int32.Parse(s3.Text));
             rfrsh.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Primitives.ButtonBase.ClickEvent));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            int tmp = Int32.Parse(gm1.Text);
-            for (int i = tmp + 1; i < Int32.Parse(gm2.Text); ++i)
-            {
-                if (stt[i] < stt[tmp])
-                {
-                    tmp = i;
-                }
-            }
-            gm.Content = stt[tmp];
+            gm.Content = get_min(Int32.Parse(gm1.Text), Int32.Parse(gm2.Text));
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            for (int i = Int32.Parse(ad1.Text); i < Int32.Parse(ad2.Text); ++i)
-                stt[i] += Int32.Parse(ad3.Text);
+            add(Int32.Parse(ad1.Text), Int32.Parse(ad2.Text), Int32.Parse(ad3.Text));
             rfrsh.RaiseEvent(new RoutedEventArgs(System.Windows.Controls.Primitives.ButtonBase.ClickEvent));
         }
 
@@ -73,18 +98,7 @@ namespace Struct
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            int sum = 0;
-            for (int i = Int32.Parse(gs1.Text); i < Int32.Parse(gs2.Text); ++i)
-            {
-                sum += stt[i];
-            }
-            gs.Content = sum;
-        }
-
-        void add(int L, int R, int val)
-        {
-            for (int i = L; i < R; ++i)
-                stt[i] += val;
+            gs.Content = get_sum(Int32.Parse(gs1.Text), Int32.Parse(gs2.Text));
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
