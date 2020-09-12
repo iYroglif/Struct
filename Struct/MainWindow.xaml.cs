@@ -103,9 +103,12 @@ namespace Struct
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            // Без цикла:
+
+            //
             for (int I = Int32.Parse(f1.Text); I < Int32.Parse(f2.Text) + 1; ++I)
             {
-                // Изменяемый код ниже:
+                // Изменяемый код в цикле ниже:
                 add((3 * I) % 15, ((3 * I) % 15) + 2, I + 1);
                 add(I, I + 3, -I - 1);
                 
